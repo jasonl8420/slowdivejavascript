@@ -77,7 +77,7 @@ coll[i].addEventListener("click", function() {
     content.style.display = "block";
   }
 });
-}
+};
 
 
 // Trial and error javascript codes
