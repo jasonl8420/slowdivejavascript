@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slowdive JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/panda-syntax-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Include jQuery UI CSS (for styling) from CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&f[]=switzer@300,400,500&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- This div includes all of the content displayed on the webpage -->
+    <div class="box">
+        <!-- dedicated to the title and the vertical nav bar -->
+        <div class="leftColumn">
+            <h1 id="slowdive">Slowdive <br> JavaScript</a></h1>
+            <nav class="navbar">
+                <ul>
+                    <p class="headers">CONTEXT</p>
+                    <li><a class="nav-link" href="" id="item1"><span class="dot"></span>About</a></li>
+                    <li><a class="nav-link" href="" id="item2"><span class="dot"></span>Computers & Programs</a></li>
+                    <li><a class="nav-link" href="" id="item3"><span class="dot"></span>JavaScript</a></li>
+                    <br>
+                    <p class="headers">FOUNDATION</p>
+                    <li><a class="nav-link" href="" id="item4"><span class="dot"></span>Environment</a></li>
+                    <li><a class="nav-link" href="" id="item5"><span class="dot"></span>Values</a></li>
+                    <li><a class="nav-link" href="" id="item6"><span class="dot"></span>Variables</a></li>
+                    <li><a class="nav-link" href="" id="item7"><span class="dot"></span>Objects</a></li>
+                    <li><a class="nav-link" href="" id="item8"><span class="dot"></span>Arrays</a></li>
+                    <li><a class="nav-link" href="" id="item9"><span class="dot"></span>Functions</a></li>
+                    <li><a class="nav-link" href="" id="item10"><span class="dot"></span>Conditionals</a></li>
+                    <li><a class="nav-link" href="" id="item11"><span class="dot"></span>Loops</a></li>
+                    <li><a class="nav-link" href="" id="item12"><span class="dot"></span>Basic Operators</a></li>
+                    <li><a class="nav-link" href="" id="item13"><span class="dot"></span>Comparisons</a></li>
+                    <li><a class="nav-link" href="" id="item14"><span class="dot"></span>Logical Operators</a></li>
+                    <li><a class="nav-link" href="" id="item15"><span class="dot"></span>Style</a></li>
+                    <br>
+                    <p class="headers">BROWSER</p>
+                    <li><a class="nav-link" href="" id="item16"><span class="dot"></span>The DOM</a></li>
+                    <li><a class="nav-link" href="" id="item17"><span class="dot"></span>DOM Methods</a></li>
+                    <br>
+                    <li><a class="nav-link" href="" id="item18"><span class="dot"></span>Glossary</a></li>
+                    <li><a class="nav-link" href="" id="item19"><span class="dot"></span>v0.2</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <!-- This div is dedicated to all the content that comes on the right hand side
+             As much as it would have been nice to allocate corresponding content into its
+             own html file, the feature I wanted to recreate and my skill didn't allow me
+             to do so. This is something I can come back and improve on after acquiring more 
+             knowledge in js.
+             In addition, the nature of highlight.js has made the code less cleaner, which is 
+            s omething I can look further into. -->
+
+        <div class="rightColumn">
+            <!-- This div is to accomodate for small design error at the top of the browser -->
+            <div id="secretBox"></div>
+            <!-- About the website and its purpose -->
+            <div class="page-content" id="item1-content">
+                <p><u>Slowdive JavaScript</u></P>
+                <p>JavaScript, the web's programming language is not only difficult to learn, but it is also
+                    somewhat
+                    overwhelming with how many layers there are to understand: how programming works, what the
+                    terms
+                    mean,
+                    how to write in the language, and how to apply this knowledge towards practical use. This
+                    information can become dense, further complicated by fine-detailed specifications for
+                    software
+                    engineers.</p>
+                <p>For this reason, the subject as whole is daunting to beginners. A high
+                    level
+                    of detail, while essential for specialists, is a huge obstacle to the less experienced.
+                    Consequently, the less-experienced like myself are tempted to adoopt haphzard programming
+                    methods,
+                    like copying and
+                    pasting code. While getting something to work is important, I have also realized how you get
+                    there
+                    is
+                    also just as important.</p>
+
+                <p>Slowdive JavaScript is a not a guide persay, but rather a personal space for
+                    me to reorganize the information and content I've gathered about JavaScript throughout my on
+                    going journey in learning the language: it allows me to reiterate and reinforce my learning in
+                    foundations of JavaScript thus far. That is not to say Slowdive JavaScript is not a guide
+                    either, as simplified as the content is for my own understanding,
+                    I would hope people leave the page feeling less intmidiated and more intrigued about
+                    learning
+                    JavaScript.+_!+= </p>
+            </div>
+
+
+            <!-- Getting started with javascript -->
+            <div class="page-content" id="item2-content">
+                <p><u>Getting Started</u></p>
+                <p>To get started with JavaScript, you'll need a code editor and a web browser. You can write JavaScript
+                    code in any plain text editor, but code editors like Visual Studio Code, Sublime Text, or Atom offer
+                    features that make coding easier.
+                    In addition to a code editor, you'll need a web browser to run and test your JavaScript code.
+                    Browsers like Chrome and Mozilla FireFox have built-in developer tools that allow you to inspect and
+                    debug your code. </p>
+
+                <p>Now that you have a background understanding of JavaScript, it's time to dive in and learn more
+                    about the
+                    foundation of the programming language. In the following sections of this website, we'll explore
+                    JavaScript step by step, covering fundamental concepts and practical examples.!+_@=
+                </p>
+            </div>
+
+
+            <!-- Brief history about javascript -->
+            <div class="page-content" id="item3-content">
+                <p><u>JavaScript</u></p>
+                <p>Historically, JavaScript was first known as LiveScript, making its appearance in 1995, but Netscape
+                    changed its name to JavaScript, possibly because of the excitement being generated by Java. Keep in
+                    mind that JavaScript and Java are two completely different languages both in concept and design:
+                    Java (developed by Sun Microsystems) is a powerful and much more complex programming language.</p>
+                <div class="container">
+                    <p> Javascript is a dynamic computer programming language. JavaScript is most commonly used as a
+                        part of web
+                        pages, whose implementations allow <span class="moreDetail">client-side scripts</span> to
+                        interact with the user and create dynamic
+                        pages. In addition, Javascript is also:
+                    </p>
+                    <div class="hover-box">
+                        Client-side scripts refer to scripts that run on the client's (user's) web browser rather than
+                        on the web server.
+                    </div>
+
+                </div>
+                <p>
+                <ul style="list-style-type:disc">
+                    <li>The de-facto language of digital experience </li>
+                    <li> Commonly used in conjunction with HTML/CSS to add interactivity </li>
+                    <li> A lightweight programming language </li>
+                    <li> An interpreted language (means that scripts execute without preliminary compilation) </li>
+                    <li> Open to everyone without purchasing a license </li>
+                </ul>
+                </p>
+                <p>Now let's take a look at some advantages and disadvantages of JavaScript.</p>
+
+                <p><u>Advantages of JavaScript</u>
+                <ul style="list-style-type:disc">
+                    <li>Less server interaction: You can validate user input before sending the
+                        page off to the server. This saves server traffic, which means less load on
+                        your server.
+                    </li>
+                    <br>
+                    <li>Immediate feedback to the visitors: They don't have to wait for a
+                        page reload to see if they have forgotten to enter something.
+
+                    </li>
+                    <br>
+                    <li>
+                        Increased interactivity: You can create interfaces that react when the
+                        user hovers over them with a mouse or activates them via the keyboard.
+                    </li>
+                    <br>
+                    <li>
+                        Richer interfaces: You can use JavaScript to include such items as drag-and-drop components and
+                        sliders to give a rich Interface to your site
+                        visitors.
+                    </li>
+                </ul>
+
+                <p><u>Limitations of JavaScript</u></p>
+                <ul style="list-style-type:disc">
+                    <li>Client-side JavaScript does not allow the reading or writing of files. This
+                        has been kept for security reason.
+                    </li>
+                    <br>
+                    <li>
+                        JavaScript cannot be used for networking applications because there is no
+                        such support available.
+                    </li>
+                    <br>
+
+                    <li>
+                        JavaScript doesn't have any multithreading or multiprocessor capabilities.
+                    </li>
+                </ul>
+                <p>Keep in mind, JavaScript is a lightweight, interpreted programming language that
+                    allows you to build interactivity into otherwise static HTML pages.</p>
+
+            </div>
+
+
+            <!-- How to link javascript  -->
+            <div class="page-content" id="item4-content">
+                <p><u>Environment</u></p>
+                <p>We now need a working environment to run our JavaScript codes. While there exists two different
+                    working environments, client-side and server-side, this guide will
+                    only focus on server-side working environment.</p>
+
+                <p><u>The "Script" Tag</u></p>
+                <p>In order for the JavaScript code to be actually executed via the browser, the <span
+                        class='variableText'>script</span> tag is used to
+                    embed/reference the JavaScript code within an HTML document. </p>
+
+                <p><u>External Scripts</u></p>
+                <p>If there is a lot of JavaScript that is being used, rather than utilizing the scripts tag in HTML, a
+                    separate file dedicated solely for JavaScript is more convenient. To do so, you can still utilize
+                    the scripts tag in addition to the <span class='variableText'>src</span> attribute:</p>
+                <pre class="codes"><code class="javascript">  &#60;script src= "/path/to/script.js"&#62;</pre></code>
+                <p>Here, <span class='variableText'>/path/to/script.js</span> is an absolute path to the script from the
+                    site root. One can also
+                    provide a relative path from the current page. For instance, <span
+                        class='variableText'>src="script.js"</span>, just like
+                    <span class='variableText'>src="./script.js"</span>, would mean a file <span
+                        class='variableText'>script.js</span> in the current folder. More detail regarding
+                    absolute and relative path will be provided below.
+                </p>
+
+                <p>Not only can we also gie a full URL, but attach several scripts as well: </p>
+
+                <pre
+                    class="codes"><code class="javascript">  &#60;script src= "/js/script1.js"&#62;&#60;/script&#62; </pre>
+                </code>
+                <pre
+                    class="codes"><code class="javascript">  &#60;script src= "/js/script2.js"&#62;&#60;/script&#62; </pre>
+                </code>
+                <pre class="codes"><code class="javascript">  ... </pre></code>
+
+                <p><u>Choosing Between Relative and Absolute Paths</u></p>
+                <p>The choice between relative and absolute paths depends on your specific use case. The
+                    primary purpose of relative paths is to specify the location of a file or resource relative to the
+                    current working directory. For this reason, relative paths are commonly used when referencing
+                    resources within the same project or subdirectories of the
+                    current working directory.
+                </p>
+                <p>On the other hand, absolute paths provide the full and unambigious
+                    location of a file or resource from th root directory
+                    of the file system or web server. Absolute paths are commonly used for
+                    external resource referencing as well as fixed URLs.
+                </p>
+
+                <p>The general rule of thumb for choosing between relative and absolute path is as follows:
+                <ul>
+                    <li>
+                        Use
+                        relative pathfor resources that are part of your project and stored locally (e.g., images,
+                        stylesheets, scripts) within your project's directory structure.
+                    </li>
+                    <br>
+                    <li>
+                        Use absolute paths for external resources outside of your project's directory structure like
+                        third-party libraries or fixed URLs to
+                        ensure reliable access and potentially benefit from content distribution networks for faster
+                        loading times.
+                    </li>
+                    <br>
+                    <li>
+                        Use both approaches in cases where your project incorporates both internal and
+                        external
+                        resources.
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+
+            <!-- Different value types in js -->
+            <div class="page-content" id="item5-content">
+                <p><u>Values</u></p>
+                <p>In JavaScript, values are the fundamental building blocks that make up your programs. Values
+                    represent various types of data, such as numbers, strings, booleans, objects, and etc. </p>
+                <p>Understanding the different
+                    types of values in JavaScript as well as how they are manipulated can be of significant help in
+                    developing a stable base for which one’s JavaScript knowledge can be nicely built upon. Here's an
+                    overview of JavaScript value types and how they differ from one another.</p>
+                <p><u>Numbers</u></p>
+                <p>Numbers are used to represent both whole numbers (integers) and numbers with decimal points
+                    (floating-point numbers aka float). You can use numbers for calculations and storing quantities.
+                </p>
+                <p class="codeDescription">// An integer </p>
+                <pre class="codes"><code class="language-javascript">  let age = 25; </pre></code>
+                <p class="codeDescription">// A floating-point number, also known as a float</p>
+                <pre class="codes"><code class="language-javascript">  let price = 19.99;</code></pre>
+                <p><u>Strings</u></p>
+                <p>String is a data type that represents a sequence of characters, such as letters, numbers, symbols,
+                    and spaces. Strings are used to store and manipulate textual data. They are enclosed in either
+                    single quotes (') or double quotes
+                    ("), and JavaScript treats them interchangeably. You can
+                    manipulate strings by combining them (concatenation), extracting parts of them (substring), and
+                    performing various string-related operations.
+                </p>
+
+                <div class="codeBox">
+                    <pre
+                        class="codes"><code class="language-javascript">  let singleQuotesString = 'This is a string using single quotes.';</pre>
+                    </code>
+                    <pre
+                        class="codes"><code class="language-javascript">  let doubleQuotesString = "This is a string using double quotes.";</pre>
+                    </code>
+                    <pre
+                        class="codes"><code class="language-javascript">  let mixedQuotesString = 'You can also use "mixed" quotes in JavaScript.'; </pre>
+                    </code>
+                    <pre class="codes"><code class="language-javascript">  let emptyString = ''; </pre></code>
+                    <pre class="codes"><code class="language-javascript">  let alphanumericString = '12345@#$%^';</pre>
+                    </code>
+
+                    <br>
+                    <p class="codeDescription">// Concatenation</p>
+                    <pre class="codes"><code class="language-javascript">  let firstName = 'John'; </pre></code>
+                    <pre class="codes"><code class="language-javascript">  let lastName = 'Doe';</pre></code>
+                    <pre
+                        class="codes"><code class="language-javascript">  let fullName = firstName + ' ' + lastName;</pre>
+                    </code>
+                    <p class="codeDescription">// Output: John Doe </p>
+                    <pre class="codes"><code class="language-javascript">  console.log(fullName);</pre></code>
+                    <button type="button" class="collapsible">&nbsp; Details</button>
+                    <div class="content">
+                        <p>Here, textual data has been stored into two differnt variables in the form of
+                            strings.Utilizing concatenation and arithmetic operation, which will be discussed
+                            later, allows the two
+                            variables of strings to be coupled.</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p class="codeDescription">// String Length</p>
+                    <pre class="codes"><code class="language-javascript">  let text = 'Hello, World!';</pre></code>
+                    <pre class="codes"><code class="language-javascript">  let length = text.length;</pre></code>
+                    <p class="codeDescription">// Length is 13</p>
+
+                </div>
+
+                <p><u>Boolean</u></p>
+                <p>A boolean is a data type that represents one of two values: <span class='textEmphasis'>true</span> or
+                    <span class='textEmphasis'>false</span>. Booleans are used for
+                    logical operations, comparisons, and making decisions in your code. They are fundamental to control
+                    the flow of your program and implement conditional logic with conditional statements like if, else,
+                    and while, which will also be discussed later.
+                </p>
+                <pre class="codes"><code class="language-javascript">  let x = 5;</pre></code>
+                <pre class="codes"><code class="language-javascript">  let y = 10;</pre></code>
+                <pre class="codes"><code class="language-javascript">  let isGreaterThan = x > y;</code></pre>
+                <p class="codeDescription">// false</p>
+
+                <pre class="codes"><code class="language-javascript">  let isEqual = x === y;  </pre></code>
+                <p class="codeDescription">// false</p>
+
+                <p><u>Null</u></p>
+                <p>In JavaScript, null is a special value that represents the intentional absence of any object or
+                    value. It is often used to indicate that a variable, property, or value should be empty or have no
+                    value. </p>
+                <pre class="codes"><code class="language-javascript">  function doNothing() { <br>
+    }</pre></code>
+                <p class="codeDescription">// The function above does nothing</p>
+                <p>code that doesn't execute any meaningful logic or doesn't have any practical purpose.</p>
+
+                <pre class="codes"><code class="language-javascript">  let myVariable = null; </pre></code>
+                <pre class="codes"><code class="language-javascript">  console.log(myVariable); </pre></code>
+                <p class="codeDescription">// Outputs: null</p>
+
+                <p>However, like other programming languages, null code in JavaScript is generally not desired in
+                    real-world applications, as it doesn't contribute to the functionality of the program. It may be
+                    used temporarily during development or as a placeholder for future code.</p>
+
+                <p><u>Null vs. Undefined</u></p>
+                <p>Given the fact that both null and undefined represent the absence of a value, it is
+                    difficult to grasp the difference between the two data types. Here is an analogy that has helped me
+                    better understand the distinct difference between null and undefined.</p>
+
+                <p>Undefined:</p>
+                <ul>
+                    <li>
+                        Think of it as an <span class='textEmphasis'>unknown</span> or <span class='textEmphasis'>not
+                            set</span> value
+                    </li>
+                    <br>
+                    <li>
+                        It's what you get when you ask for the value of something that hasn't been given any value yet
+                    </li>
+                    <br>
+                    <li> Ex: Imagine you have a blank sheet of paper; it's like asking, <span
+                            class='textEmphasis'>What's written on it?</span>The
+                        answer would be <span class='textEmphasis'>undefined</span>because there's nothing on it</li>
+                </ul>
+                <p>Null:</p>
+                <ul>
+                    <li>
+                        Think of it as a <span class='textEmphasis'>deliberate emptiness</span> or <span
+                            class='textEmphasis'>clearing</span> value
+                    </li>
+                    <br>
+                    <li>
+                        It's used when you want to say, <span class='textEmphasis'>I know this thing exists, but right
+                            now, it should be empty.</span>
+                    </li>
+                    <br>
+                    <li>
+                        Ex: Imagine you have an empty box, and you put a label inside it that says<span
+                            class='textVariable'> null.</span> You're
+                        saying, <span class='textEmphasis'>This box is meant to be empty on purpose.</span>
+                    </li>
+                </ul>
+                </p>
+                <p>Here, various value types, such as numbers, strings, boolean, null, and undefined have been explored.
+                    While the importance of remembering the nitty gritty details of different value types might often be
+                    overlooked especially by those in hurry to dig into more advanced concepts, values should not be
+                    left with such hurry. To properly digest the concepts that will add on later like operators and many
+                    more, taking the time with values can be helpful in doing so.
+                </p>
+            </div>
+            <div class="page-content" id="item33-content">
+                <p><u>The “script” tag </u></p>
+                <p>
+                </p>
+            </div>
+
+
+            <!-- Different variable types and general conventions -->
+            <div class="page-content" id="item6-content">
+                <p><u>Variables</u></p>
+                <p>In programming, a variable is like a container or a named storage location that you can use to hold
+                    and manipulate data. Think of it as a labeled box where you can store different types of
+                    information, such as numbers, text, or even more complex structures like lists of items.</p>
+
+                <p><u>Uses of Variables</u></p>
+                <ul>
+                    <li>
+                        Data Storage: Variables serve as data storage units where you can hold and retain information.
+                        When you collect data from a user, such as their name or age, you store it in variables so that
+                        you can refer to and use that data throughout your program's execution.
+                        Without variables, you'd have no way to keep track
+                    </li>
+                    <br>
+                    <li>
+                        Data Manipulation: Variables are not just placeholders for data; they enable you to perform
+                        operations and transformations on that data.
+                        Variables are crucial for data processing, enabling you to manipulate information to produce
+                        desired outcomes.
+                    </li>
+                    <br>
+                    <li>
+                        Readability: One of the fundamental principles of writing clean and maintainable code is
+                        readability.
+                        Variables enhance the readability of your code by providing meaningful and descriptive names for
+                        data. Instead of working with raw values or data scattered throughout your code, you can use
+                        variable names that convey the purpose or significance of the data.
+                    </li>
+                    <br>
+                    <li>
+                        Reusability: You can reuse the same variable to work with different values, making your code
+                        more
+                        efficient and concise. This also helps to avoid redundancy and reduces the chances of errors.
+                    </li>
+                </ul>
+                <p><u>Declaring A Variable</u></p>
+                <p>In the following line of code, we will declare a variable and assign it the value of <span
+                        class='textVariable'>56</span>. The first
+                    time you declare a variable is known as a variable declaration. </p>
+                <pre class="codes"><code class="language-javascript">  var my_variable = 56;</pre></code>
+
+                <button type="button" class="collapsible">&nbsp; Details</button>
+                <div class="content">
+                    <p><span class='variableDetails'>Var</span> is a <span class='moreDetail'>variable statements</span>.
+                        It tells the program to begin
+                        declaring
+                        a variable and that the
+                        following word will be the name of that variable.</p>
+                    <p><span class='blackCode'>my_variable</span> is an arbitrary name for the
+                        variable, decided by the author of the program. You can name a variable anything you want, so
+                        long
+                        as it is not a <span class="moreDetail">reservered word</span>. This cannot contain spaces
+                        either. If you want more than one
+                        word
+                        for the variable name, use undersecores in between each word. See more about these small details
+                        in
+                        the <span class='textLink'>style</span> section.</p>
+                    <p>The equal sign <span class='textDetails'>=</span> is the <span class="moreDetail">assignment
+                            operator</span>. This does not carry
+                        the same
+                        meaning as in mathematics. Here, the sign means "place the value to th right of the sign insdie
+                        the
+                        variable named on the left." A more accurate sign would have been a left facing arrow:</p>
+                    <pre class="codes" id="codeInside"><code class="language-javascript">var my_variable <-56;</pre>
+                    </code>
+                </div>
+                <p><u>Different Variable Types</u></p>
+                <p> There exist a total of three different variable types: <span class='variableText'>var</span>, <span
+                        class='variableText'>let</span>, and <span class='variableText'>const</span>. Variables declared
+                    with <span class='variableText'>var</span> have function-level scope, while those declared
+                    with <span class='variableText'>let</span> and <span class='variableText'>const</span> have
+                    block-level scope. <br><br>Block-level scope means that variables are limited to the
+                    block (i.e., within curly braces {}) in which they are defined, such as in loops or conditional
+                    statements. In other words, variables set within block-level scope can't be used outside of that
+                    particular block in which the variable(s) were declared. Due to this reason, <span
+                        class='variableText'>let</span> and <span class='variableText'>const</span> are generally the
+                    preferred varialbe types over
+                    <span class='variableText'>var</span>: they provide more predictable and safer scoping for your
+                    variables,
+                    making your code easier to understand and maintain.
+                </p>
+                <p>In programming, scoping refers to the set of rules that determine where in your code a particular
+                    variable or identifier can be accessed or referenced. It defines the visibility and lifetime of
+                    variables and other identifiers within your program. Scoping rules help prevent naming conflicts,
+                    manage variable lifetimes, and ensure that your code behaves as expected.
+                </p>
+                <p><u>Best Practices</u></p>
+                <p>Here are some seemingly tedious yet important notes to remember about variables:</p>
+                <ul>
+                    <li>
+                        Use <span class='variableText'>let</span>for most variables, and <span
+                            class='variableText'>const</span> for values that should not change.
+                    </li>
+                    <li>
+                        Name variables with clarity and consistency.
+                    </li>
+                    <li>
+                        Use camelCase for variable names (e.g, slowDive).
+                    </li>
+                    <li>
+                        Avoid using reserved words or keywords as variable names.
+
+                    </li>
+                </ul>
+                <p>On to the next.</p>
+            </div>
+
+
+            <!-- Objects -->
+            <div class="page-content" id="item7-content">
+                <p><u>Objects</u></p>
+                <p>An object is a fundamental data type used to represent and store collections of related data and
+                    functionality. You can think of an object as a container that holds various pieces of information
+                    and methods (functions) that operate on that information. Objects are a central concept in
+                    JavaScript, and they play a crucial role in structuring and organizing your code.</p>
+
+                <p><u>Object Properties</u></p>
+                <p>An object consists of properties, which are essentially key-value pairs. The key is a string (also
+                    known as a property name), and the value can be of any data type (e.g., numbers, strings, other
+                    objects, functions, etc.).</p>
+                <p class="codeDescription">// Object Propeties</p>
+                <pre class="codes"><code class="language-javascript">  let person = {
+                name: "John",
+                age: 30,
+                isStudent: false
+  }; </pre></code>
+                <br>
+                <br>
+                <p><u>Accessing An Object's Values</u></p>
+                <div class="container">
+                    <p> To retrieve information from an object, you can ask for the particular value you are looking for
+                        through <span class='moreDetail'>dot.notation</span> or through <span
+                            class='moreDetail'>[bracket] notation</span>. There are subtle differences between each
+                        type,
+                        but this guide will use dot notation.
+                    </p>
+                    <div class="hover-box">
+                        Bracket notation is one style used for accessing properties in an object. It looks like this:
+                        object['property']
+                    </div>
+
+                </div>
+
+                <pre class="codes"><code class="language-javascript">  var dog = {
+    name: "Piper",
+    breed: "Corgi",
+    activity: "walking in the neighborhood"
+  }</pre></code>
+
+
+                <p class="codeDescription">// Dot Notation </p>
+                <pre class="codes"><code class="language-javascript">  dog.name</pre></code>
+
+                <p class="codeDescription">// Bracket Notation </p>
+                <pre class="codes"><code class="language-javascript">  dog["name"]</pre></code>
+
+                <p class="codeDescription">// This will give you the result: </p>
+                <pre class="codes"><code class="language-javascript">  Piper</pre></code>
+
+                <p><u>Square brackets </u></p>
+                <p>
+                    For multiword properties, the dot access doesn’t work:
+
+                <pre class="codes"><code class="language-javascript">  user.likes birds = true</pre></code>
+                <p class="codeDescription">// this would give a syntax error </p>
+                <br>
+
+                JavaScript doesn’t understand that. It thinks that we address <span
+                    class='textEmphasis'>user.likes</span>, and then gives a
+                syntax error when comes across unexpected birds. <br><br>
+
+                The <span class='textEmphasis'>dot</span> requires the key to be a valid variable identifier. That
+                implies: contains no spaces,
+                doesn’t start with a digit and doesn’t include special characters ($ and _ are allowed). <br><br>
+
+                There’s an alternative “square bracket notation” that works with any string:
+
+                <pre class="codes"><code class="language-javascript">  let user = {};
+                    </pre></code>
+
+                // set
+                user["likes birds"] = true;
+
+                // get
+                alert(user["likes birds"]); // true
+
+                // delete
+                delete user["likes birds"];
+                Now everything is fine. Please note that the string inside the brackets is properly quoted (any
+                type of quotes will do).
+
+                Square brackets also provide a way to obtain the property name as the result of any expression –
+                as opposed to a literal string – like from a variable as follows:
+
+                let key = "likes birds";
+
+                // same as user["likes birds"] = true;
+                user[key] = true;
+                Here, the variable key may be calculated at run-time or depend on the user input. And then we
+                use it to access the property. That gives us a great deal of flexibility.
+
+                For instance:
+
+                let user = {
+                name: "John",
+                age: 30
+                };
+
+                let key = prompt("What do you want to know about the user?", "name");
+
+                // access by variable
+                alert( user[key] ); // John (if enter "name")
+                The dot notation cannot be used in a similar way:
+
+                let user = {
+                name: "John",
+                age: 30
+                };
+
+                let key = "name";
+                alert( user.key ) // undefined
+                </p>
+
+                <div class="codeBox">
+                    <pre class="codes"><code class="language-javascript">  var dog = {
+             name: "Bo",
+             breed: "Corgi",
+             activity: "walking in the park"
+  };
+                </pre></code>
+
+                    <p class="codeDescription">&nbsp// Dot Notation</p>
+                    <pre class="codes"><code class="language-javascript">  dog.name</pre></code>
+                    <p class="codeDescription">&nbsp// Bracket Notation</p>
+                    <pre class="codes"><code class="language-javascript">  dog["name"]</pre></code>
+
+                    <p class="codeDescription">&nbsp// This will give you the result:</p>
+                </div>
+
+                <p><u>Methods</u></p>
+                <p>An object can also contain methods, which are functions defined as properties of the object. These
+                    methods can perform actions or computations related to the object's data. </p>
+
+                <pre class="codes"><code class="language-javascript">  let car = {
+            make: "Toyota",
+            model: "Camry",
+            start: function() {
+            console.log("Engine started!");
+  }
+  };</pre></code>
+
+                <p><u>Object as a Container</u></p>
+                <p>To simplify your understanding, think of an object as a container that helps you organize related
+                    data and functions. For instance,
+                    you can use an object to represent a person's information, a car's details, a product's attributes,
+                    and so on.</p>
+            </div>
+
+
+            <!-- Array and how it differs from objects -->
+            <div class="page-content" id="item8-content">
+                <p><u>Arrays</u></p>
+                <p>An array is an ordered, list-like data structure. In JavaScript particularly, arrays are a
+                    specific
+                    kind of object that get special treatment. Arrays look different from objects, but operate the
+                    same
+                    way behind-the-scenes.</p>
+
+                <p class="codeDescription">// Object </p>
+                <pre class="codes"><code class="language-javascript">  var my_obj = {
+                friend_1: "James",
+                friend_2: "Adam",
+  }</pre></code>
+                <p class="codeDescription">// Array </p>
+                <pre class="codes"><code class="language-javascript">  var my_arr = ["James","Adam"]; </pre></code>
+                <button type="button" class="collapsible">&nbsp; Details</button>
+                <div class="content">
+                    <p><span class='variableDetails'>Var</span> is a <span class='moreDetail'>variable statement</span>.
+                        It tells the program to begin
+                        declaring
+                        a variable and that thei
+                        following word will be the name of that variable.</p>
+                    <p><span class='blackCode'>my_variable</span> is an arbitrary name for the
+                        variable, decided by the author of the program. You can name a variable anything you want, so
+                        long
+                        as it is not a <span class='moreDetail'>reservered word</span>. This cannot contain spaces
+                        either. If you want more than one
+                        word
+                        for the variable name, use undersecores in between each word. See more about these small details
+                        in
+                        the <span class='textInfo'>style</span> section.</p>
+                    <p>The equal sign <span class='textDetails'>=</span> is the <span class='moreDetail'>assignment
+                            operator</span>. This does not carry
+                        the same
+                        meaning as in mathematics. Here, the sign means "place the value to th right of the sign insdie
+                        the
+                        variable named on the left." A more accurate sign would have been a left facing arrow:</p>
+                    <pre class="codes"><code class="language-javascript">var my_variable <-56;</pre></code>
+                </div>
+
+                <p>Array lacks the specificity of objects; each item/element in an array is ordered according to its
+                    position in
+                    the array with no other unique information that can be assigned. On the other hand, objects
+                    allow
+                    you to associate named
+                    properties (keys) with their corresponding values. This association provides a way to structure
+                    and
+                    organize data
+                    in a more detailed and specific manner compared to arrays. Thus, arrays are typically used for
+                    storing
+                    ordered collections of values of the same data type. Meaning, unless you need to represent data
+                    with
+                    specific attributes, relationships, and names for each value, array is the preferred data
+                    structure
+                    in the case of homogenous set of values where the arrangement of elements holds significance.
+                </p>
+
+                <p><u>Declaring and Initializing Arrays</u></p>
+                <p>To declare and initialize arrays, there are several ways to go about it: array literal syntax
+                    [brackets], Array() constructor, Array.of(), and more. There are subtle differences among them,
+                    however, array literal syntax is the most common and straighforward way to declare and intialize
+                    arrays. </p>
+                <pre class="codes"><code class="language-javascript">  let myArray = []; </pre></code>
+                <pre
+                    class="codes"><code class="language-javascript">  let fruits = ["apple", "banana", "cherry"];  </pre>
+                </code>
+
+                <p><u>Accessing Elements</u></p>
+                <pre class="codes"><code class="language-javascript">  let firstFruit = fruits[0]; // "apple"</pre>
+                </code>
+                <pre class="codes"><code class="language-javascript">  let secondFruit = fruits[1]; // "banana"</pre>
+                </code>
+                <p>Array elements are accessed using square bracket notation and the element's index. While there
+                    must
+                    be additional reasons as
+                    to
+                    why arrays are indexed primarily using sqaure bracket, keep in mind that arrays are typically
+                    used
+                    to store a
+                    numerically-ordered collection of elements hence why the elements are zero-indexed using their
+                    relative
+                    position in the array. </p>
+                <p><u>Nested Arrays</u></p>
+                <p>Nested arrays are arrays that contain other arrays as their elements. This allows you to create
+                    multi-dimensional data structures, such as matrices or arrays of arrays, to represent more
+                    complex
+                    data.</p>
+                <p>You can nest arrays to any depth you need, creating multi-dimensional arrays. For instance,
+                    here's a
+                    3D array:</p>
+                <pre class="codes"><code class="language-javascript">  let matrix =  [ 
+        [
+          [1, 2],
+          [3, 4]
+        ],
+        [
+          [5, 6],
+          [7, 8]
+        ]
+      ];</pre>
+                </code>
+                <pre class="codes"><code class="language-javascript">  let element = matrix[1][0[[1]; // 6 
+                </pre></code>
+                <pre class="codes"><code class="language-javascript">  let element2 = matrix[0][1[[1]; // 4   
+                </pre></code>
+                <p class="codeDescription">// Despite it being a multi-dimensional array, accessing an element works
+                    exactly the same way. Instead, think of it as accessing an element within another element.
+                </p>
+                <p>Nested arrays are useful when you need to represent structured data or grids of values, like
+                    matrices, game boards, or tabular data. They allow you to organize data in a way that mirrors
+                    its
+                    inherent structure.
+                </p>
+
+                <p><u>Adding and Removing Elements</u></p>
+                <p>Adding and Removing Elements:
+                    JavaScript provides several methods to add and remove elements from an array. For example:
+
+                    push(): Adds an element to the end of the array.
+                    pop(): Removes and returns the last element of the array.
+                    unshift(): Adds an element to the beginning of the array.
+                    shift(): Removes and returns the first element of the array.
+                    splice(): Allows you to add, remove, or replace elements at specific positions in the array.</p>
+
+                <pre class="codes"><code class="language-javascript">  fruits.push("orange"); // Adds "orange" to the end of the array
+                    let removedFruit = fruits.pop(); // Removes and returns "orange"
+                    
+                    fruits.unshift("grape"); // Adds "grape" to the beginning of the array
+                    let removedFirstFruit = fruits.shift(); // Removes and returns "grape"
+                    
+                    fruits.splice(1, 1, "kiwi"); // Replaces the second element with "kiwi"</pre>
+                </code>
+
+                <p>As a recap, here are a few key characteristics of array to keep in mind before moving forward: </p>
+                <ul>
+                    <li>JavaScript arrays are resizable and can contain a mix of different data types. </li>
+                    <br>
+                    <li> JavaScript arrays are not associative arrays and so, array elements cannot be accessed
+                        using
+                        arbitrary strings as indexes, but must be accessed using nonnegative integers as indexes.
+                    </li>
+                    <br>
+                    <li>JavaScript arrays are zero-indexed: the first element of an array is at index 0, the second
+                        is
+                        at index 1, and so on — and the last element is at the value of the array's length property
+                        minus 1.</li>
+                </ul>
+            </div>
+
+
+            <!-- Functions -->
+            <div class="page-content" id="item9-content">
+                <p><u>Functions</u></p>
+                <p>In everyday life, we make decisions based on certain conditions. For example, you might decide to
+                    carry an umbrella if the weather forecast predicts rain. Similarly in programming, conditionals
+                    are
+                    statements
+                    that can control whether or not specific code runs. They are called such
+                    because they test whether or not a condition is met before deciding to proceed running your
+                    program.
+                    If
+                    the test is evaluated to be true, the code will run; if false it will not and/or may jump to
+                    another
+                    test.
+                </p>
+                <div class="container">
+                    <p> ;asdfjlsdfkjdslfjsflksd <span class="moreDetail">variable statements</span> sfjksfdlsldkfjs
+                    </p>
+                    <div class="hover-box">
+                       JavaScript programs concsist of statements with an appropriate syntax. A single statements
+                       may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.
+                       Much like enlgish, a group of these statements form a complete thought.
+                    </div>
+                </div>
+                <pre class="codes"><code class="language-javascript">  function trackMouse{event} {
+
+    var x = event.clientX;
+
+    var y = event.clientY;
+
+
+    var tooltip = document.querySelector{'#tooltip'};
+
+    tooltip.style.top = $(y + 10);
+
+    tooltip.style.left = $(x + 10);
+
+  }
+                </pre></code>
+
+                <button type="button" class="collapsible">&nbsp; Details</button>
+                <div class="content">
+                    <p>Functions actually started out with a different syntax that more closely resembles variable statements:</p>
+                    <br>
+                    <pre class="codes"><code class="language-javascript">  var my_functions = function () {
+
+    return "hello world";
+
+  }</pre></code> 
+                    <p>However, because functions get written so often the more common shorthand was implemented:</p>
+                
+                    <pre class="codes"><code class="language-javascript">  function my_function () {
+
+    return "hello world";
+
+  }</pre></code> 
+
+                    <p>As with many things in JavaScript, functions are usually objects behind-the-scenes.</p>
+                </div>
+                <br>
+                <br>
+            </div>
+
+
+            <!-- Conditionals including if, while, and else if and their differences -->
+            <div class="page-content" id="item10-content">
+                <p><u>Conditionals</u></p>
+
+                <p>In everyday life, we make decisions based on certain conditions. For example, you might decide to
+                    carry an umbrella if the weather forecast predicts rain. Similarly in programming, conditionals
+                    are
+                    statements
+                    that can control whether or not specific code runs. They are called such
+                    because they test whether or not a condition is met before deciding to proceed running your
+                    program.
+                    If
+                    the test is evaluated to be true, the code will run; if false it will not and/or may jump to
+                    another
+                    test.
+                </p>
+                <p><u>Basic Components</u></p>
+                <p>Coniditionals consist of three main parts:</p>
+                <ul>
+                    <li>
+                        Condition: This is a question or a test that we ask the computer. For example, "Is it
+                        raining?"
+                        The condition is a Boolean expression, which means it evaluates to either true or false.
+                    </li>
+                    <br>
+                    <li>
+                        Code to Execute If True: If the condition is true, we specify a block of code that should
+                        run.
+                        For example, if it's raining, we might want to carry an umbrella.
+                    </li>
+                    <br>
+                    <li>
+                        Code to Execute If False (Optional): Sometimes, we also specify what should happen if the
+                        condition is false. For instance, if it's not raining, we might decide not to carry an
+                        umbrella.
+                    </li>
+                </ul>
+                <p><u>Syntax</u></p>
+                <p>There are three types of conditional statements. <span class="variableText">if</span>, <span
+                        class="variableText">else</span>, and <span class="variableText">else if</span>. These three get
+                    combined in conditional blocks in different ways.
+                </p>
+                <p>The <span class="variableText">if</span> statement simply tests whether or not one condition is true.
+                    If the condition is met, the code inside the braces will run.
+                </p>
+                <p>An <span class="variableText">else</span> statement comes after an <span
+                        class="variableText">if</span> statement and provides an alternative block of code to execute if
+                    the <span class="variableText">if</span> condition is false. <br> If the initial condition is true,
+                    the code in the first block that comes before the <span class="variableText">else</span> conditional
+                    will execute,
+                    and the code in the block following that conditional will be skipped.
+                </p>
+                <p>If the <span class="variableText">if</span> condition is false, the code will be skipped, and the
+                    code
+                    block that follows the <span class="variableText">if</span> conditin will execute.
+                </p>
+                <p>An <span class="variableText">else if</span> statement allows you to check multiple conditions in
+                    sequence. It comes after an <span class="variableText">if</span>
+                    statement or another <span class="variableText">else if</span> statement.
+                </p>
+                <p>JavaScript checks each condition in order. If <span class="textEmphasis">condition1</span> is true,
+                    it executes the code in the first block and skips the rest.
+                </p>
+                <p>If <span class="textEmphasis">condition1</span> is false, it checks <span
+                        class="textEmphasis">condition2</span>: if that particular condition is true, it executes the
+                    code in the second block and so on.
+                </p>
+                <p>If none of the conditions are true, it executes the code in the <span
+                        class="variableText">else</span> block (if present).
+                </p>
+
+                <p><u>Difference between else-if and multiple if statements</u></p>
+                <p>At this point, using <span class="variableText">else if</span> statements seems totally
+                    interchangeable with just using multiple
+                    <span class="variableText">if</span>
+                    statements. While they might seem to work the same way, there is a distinct difference between
+                    the two.
+                </p>
+                <p>When you use multiple <span class="variableText">if</span> statements without <span
+                        class="variableText">else if</span>, each <span class="variableText">if</span> condition is
+                    evaluated independently.
+                    This means that if one <span class="variableText">if</span> condition is true, its corresponding
+                    block of code will execute, and then
+                    the program will continue to evaluate subsequent <span class="variableText">if</span> conditions
+                    regardless of their truth value.
+                </p>
+
+                <p>On the other hand, when you use <span class="variableText">else if</span> statements, the conditions
+                    are evaluated sequentially. Once a
+                    condition is <span class="textEmphasis">true</span>, its corresponding block of code is executed,
+                    and the program exits the conditional block. This prevents unnecessary evaluations of subsequent
+                    conditions.
+                </p>
+
+                <p><u>Which Should You Use?</u></p>
+                <p>The choice between using multiple <span class="variableText">if</span> statements or <span
+                        class="variableText">else if</span> statements depends on your desired
+                    behavior. If you want to independently evaluate and execute multiple conditions, you can use
+                    multiple <span class="variableText">if</span> statements. If you want to perform exclusive checks
+                    and execute the first <span class="textEmphasis">true</span>
+                    condition
+                    while ignoring the rest, <span class="variableText">else if</span> statements are generally more
+                    suitable for that purpose.
+
+                    In most cases where you have mutually exclusive conditions (e.g., determining a letter grade
+                    based
+                    on a range), <span class="variableText">else if</span> statements provide a cleaner and more
+                    efficient way to structure your code.
+                </p>
+            </div>
+
+
+            <!-- Loops including for and while loops -->
+            <div class="page-content" id="item11-content">
+                <p><u>Loops</u></p>
+                <p> Loops in JavaScript are like a command to the program: "Do something repeatedly as long as a certain
+                    condition holds true." Loops are essential for automating repetitive tasks and processing data
+                    efficiently. There are two
+                    primary types of loops in JavaScript: the for loop and the while loop.
+                </p>
+
+                <p><u>The For Loop</u></p>
+                <p>The <span class="variableText">for</span> loop is a structured way to tell the program how many times
+                    you want to repeat a particular
+                    task.
+                </p>
+                <p>Initialization: You start by declaring a variable. This variable is like a counter, and you can give
+                    it any name you like, except for reserved words. No spaces are allowed; if you want a multi-word
+                    variable, use underscores.
+                </p>
+                <p>
+                    Condition: You set a condition that must be true for the loop to keep running. If this condition
+                    becomes false, the loop stops.
+                </p>
+
+                <p> Iteration: After each cycle of the loop, you update the variable. This usually means increasing or
+                    decreasing it by a certain amount.
+                </p>
+
+                <p>Here's an example that uses a for loop to count from 1 to 5 and print the numbers: </p>
+                <pre class="codes"><code class="language-javascript">
+                for (let i = 1; i = 5; i++) { console.log(i); } In this example, let i=1 initializes the counter
+                    variable i to 1. i =5 checks if i is less than or equal to 5. If true, the loop continues, and i++
+                    increments i by 1 after each iteration. </pre></code>
+
+                <p><u>The While Loop</u></i></p>
+                <p>The <span class="variableText">while</span> loop is like saying, "Keep doing something as long as a
+                    specific condition remains
+                    true." It's used when you don't know in advance how many times you need to repeat a task.
+                </p>
+
+                <p>Here's an example that uses a while loop to count from 0 to 9: </p>
+
+                <pre class="codes"><code class="language-javascript">  let loop_count = 0;
+                        
+  while (loop_count &lt; 10) {
+    console.log(loop_count);
+    loop_count += 1; 
+  }</pre></code>
+
+
+    
+                <button type="button" class="collapsible">&nbsp; Details</button>
+                <div class="content">
+                    <p>We first initialize a variable named <span class='blackCode'>loop_count</span> with an initial
+                        value of <span class='blackCode'>0</span>. This variable is used
+                        to keep track of the current count in the loop.</p>
+                    <p>The condition here is the variable <span class='blackCode'>loop_count</span> being less than 10.
+                        As long as loop_count is less
+                        than 10, the code inside the loop will continue to execute. with <span
+                            class='blackCode'>loop_count += 1</span>, the
+                        initialized variable is also incremented by one in each iteration. This line not only makes sure
+                        the value of the varaible is updated, but also ensures that the loop eventually exits. </p>
+                    <p>Once the variable becomes 10 or greater, the condition is no longer true: the loop exits.</p>
+                </div>
+                <br>
+                <br>
+                <div class="images">
+                    <img id="whileImage" src="whileExample.png" alt="while loop console log">
+                    <p><span class="whileDescription">while</span> loop example</p>
+                </div>
+
+                <p><u>Understanding the Difference: 'for' vs. 'while'</u></p>
+                <p>In some ways, the <span class='variableText'>while</span> loop is very similar to the <span
+                    class='variableText'>if</span> statement, testing a condition and deciding whether or not to 
+                    run some code. The difference is that an <span class='variableText'>if</span> does not run multiple times.
+                </p>>
+                <p>The <span class='variableText'>while</span> Loop
+                    Structure:
+                    The while loop offers a simpler structure, focusing solely on the loop's condition.
+                    It's your choice when you want to execute a block of code repeatedly as long as a
+                    specific condition remains true.
+                </p>
+                <p>Use Cases:
+                    Use the while loop when you don't know in advance how many iterations are required.
+                    It's ideal for situations where the loop's termination depends on dynamic
+                    conditions, such as user input validation or processing data until a certain state
+                    is reached.
+                </p>
+                <p>The <span class='variableText'>for</span> Loop
+                    Structure:
+                    A for loop is characterized by its well-defined structure, consisting of three
+                    essential components: initialization, condition, and iteration. This loop is your
+                    go-to choice when you know precisely how many times you want to repeat a specific
+                    task.
+                </p>
+                <p> Use Cases:
+                    The for loop shines when you have a clear idea of the number of iterations required.
+                    Common use cases include iterating over the elements of an array, looping a specific
+                    number of times, or any scenario where a precise number of iterations is needed.
+                </p>
+
+                </p><u>Breaking the loop </u></p>
+                <p>Normally, a loop exits when its condition becomes falsy.
+
+                    But we can force the exit at any time using the special break directive.
+
+                    For example, the loop below asks the user for a series of numbers, “breaking” when no
+                    number is entered:
+                </p>
+
+                <p>let sum = 0;
+
+                    while (true) {
+
+                    let value = +prompt("Enter a number", '');
+
+                    if (!value) break; // (*)
+
+                    sum += value;
+
+                    }
+                    alert( 'Sum: ' + sum );
+                    The break directive is activated at the line (*) if the user enters an empty line or
+                    cancels the input. It stops the loop immediately, passing control to the first line
+                    after the loop. Namely, alert.
+
+                    The combination “infinite loop + break as needed” is great for situations when a loop’s
+                    condition must be checked not in the beginning or end of the loop, but in the middle or
+                    even in several places of its body.
+                </p>
+
+                <p><u>Common Use Cases for Loops</u></p>
+                <p>Common Use Cases for Loops:
+                    Loops are incredibly versatile and are used in various scenarios in programming.
+                    Here are some common use cases:
+
+                    Iterating Over Arrays: Loops are used to go through each element in an array and
+                    perform actions on them.
+
+                    User Input Validation: Loops can be used to repeatedly ask the user for input until
+                    valid data is provided.
+
+                    Data Processing: Loops are used to process large sets of data, such as reading from
+                    a file or fetching data from a database.
+
+                    Creating Patterns: You can use loops to create patterns or shapes, such as drawing a
+                    triangle of asterisks.
+
+                    Repeating Actions: When you need to repeat a specific action multiple times, like
+                    sending emails to a list of recipients.
+                </p>
+
+                <p><u>Caution</u></p>
+                <p>While loops are powerful tools, it's important to use them carefully to avoid
+                    infinite loops, which can crash your program. Infinite loops occur when the loop's
+                    condition is always true, and the loop never exits. To avoid this, make sure that
+                    the loop's condition eventually becomes false.
+                </p>
+            </div>
+
+
+            <!-- Basic Operators and assignment -->
+            <div class="page-content" id="item12-content">
+                <p><u>Basic Operators+Assignment</u></p>
+                <p>An operator is a special character or series of characters that perform a task in JavaScript.They are
+                    like tools that help you manipulate and work with different types of values in your code. Think of
+                    them as the tools you use in a toolbox to accomplish different tasks.
+                </p>
+
+                <p><u>Arithmetic Operations</u></p>
+                <p> The following arithmetic operations are supported:
+
+                    Addition +,
+                    Subtraction -,
+                    Multiplication *,
+                    Division /,
+                    Remainder %,
+                    Exponentiation **.
+                    The first four are straightforward, while % and ** need a few words about them.
+                </p>
+
+                <p><u>Remainder %</u></p>
+                <p>
+                    The remainder operator %, despite its appearance, is not related to percents.
+
+                    The result of a % b is the remainder of the integer division of a by b.
+
+                    For instance:
+
+                    alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+                    alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+                    alert( 8 % 4 ); // 0, the remainder of 8 divided by 4
+                </p>
+                <p>
+                    Exponentiation **
+                    The exponentiation operator a ** b raises a to the power of b.
+
+                    In school maths, we write that as ab.
+
+                    For instance:
+
+                    alert( 2 ** 2 ); // 2² = 4
+                    alert( 2 ** 3 ); // 2³ = 8
+                    alert( 2 ** 4 ); // 2⁴ = 16
+                    Just like in maths, the exponentiation operator is defined for non-integer numbers as well.
+
+                    For example, a square root is an exponentiation by ½:
+
+                    alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
+                    alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+                    String concatenation with binary +
+                    Let’s meet the features of JavaScript operators that are beyond school arithmetics.
+
+                    Usually, the plus operator + sums numbers.
+
+                    But, if the binary + is applied to strings, it merges (concatenates) them:
+
+                    let s = "my" + "string";
+                    alert(s); // mystring
+                    Note that if any of the operands is a string, then the other one is converted to a string too.
+
+                    For example:
+
+                    alert( '1' + 2 ); // "12"
+                    alert( 2 + '1' ); // "21"
+                    See, it doesn’t matter whether the first operand is a string or the second one.
+
+                    Here’s a more complex example:
+
+                    alert(2 + 2 + '1' ); // "41" and not "221"
+                    Here, operators work one after another. The first + sums two numbers, so it returns 4, then the
+                    next + adds the string 1 to it, so it’s like 4 + '1' = '41'.
+
+                    alert('1' + 2 + 2); // "122" and not "14"
+                    Here, the first operand is a string, the compiler treats the other two operands as strings too.
+                    The 2 gets concatenated to '1', so it’s like '1' + 2 = "12" and "12" + 2 = "122".
+
+                    The binary + is the only operator that supports strings in such a way. Other arithmetic
+                    operators work only with numbers and always convert their operands to numbers.
+
+                    Here’s the demo for subtraction and division:
+
+                    alert( 6 - '2' ); // 4, converts '2' to a number
+                    alert( '6' / '2' ); // 3, converts both operands to numbers
+                </p>
+
+                <p><u>Assignment</u></p>
+                <p>
+                    Let’s note that an assignment = is also an operator.
+
+                    let x = 2 * 2 + 1;
+
+                    alert( x ); // 5
+                    Assignment = returns a value
+                    The fact of = being an operator, not a “magical” language construct has an interesting implication.
+
+                    All operators in JavaScript return a value. That’s obvious for + and -, but also true for =.
+
+                    The call x = value writes the value into x and then returns it.
+
+                    Here’s a demo that uses an assignment as part of a more complex expression:
+
+                    let a = 1;
+                    let b = 2;
+
+                    let c = 3 - (a = b + 1);
+
+                    alert( a ); // 3
+                    alert( c ); // 0
+                    In the example above, the result of expression (a = b + 1) is the value which was assigned to a
+                    (that is 3). It is then used for further evaluations.
+                </p>
+
+                <p><u>Modify-in-place</u></p>
+                <p>We often need to apply an operator to a variable and store the new result in that same variable.
+
+                    For example:
+
+                    let n = 2;
+                    n = n + 5;
+                    n = n * 2;
+                    This notation can be shortened using the operators += and *=:
+
+                    let n = 2;
+                    n += 5; // now n = 7 (same as n = n + 5)
+                    n *= 2; // now n = 14 (same as n = n * 2)
+
+                    alert( n ); // 14
+                    Short “modify-and-assign” operators exist for all arithmetical and bitwise operators: /=, -=, etc.
+
+                    Such operators have the same precedence as a normal assignment, so they run after most other
+                    calculations:
+
+                    let n = 2;
+
+                    n *= 3 + 5; // right part evaluated first, same as n *= 8
+
+                    alert( n ); // 16
+                    Increment/decrement
+                    Increasing or decreasing a number by one is among the most common numerical operations.
+
+                    So, there are special operators for it:
+
+                    Increment ++ increases a variable by 1:
+
+                    let counter = 2;
+                    counter++; // works the same as counter = counter + 1, but is shorter
+                    alert( counter ); // 3
+                    Decrement -- decreases a variable by 1:
+
+                    let counter = 2;
+                    counter--; // works the same as counter = counter - 1, but is shorter
+                    alert( counter ); // 1
+                    Important:
+                    Increment/decrement can only be applied to variables. Trying to use it on a value like 5++ will give
+                    an
+                    error.
+
+                    The operators ++ and -- can be placed either before or after a variable.
+
+                    When the operator goes after the variable, it is in “postfix form”: counter++.
+                    The “prefix form” is when the operator goes before the variable: ++counter.
+                    Both of these statements do the same thing: increase counter by 1.
+                </p>
+            </div>
+
+
+            <!-- Comparisons  -->
+            <div class="page-content" id="item13-content">
+                <p><u>Comparisons</u></p>
+                <p>We know many comparison operators from maths.
+
+                    In JavaScript they are written like this:
+
+                    Greater/less than: a > b, a < b. Greater/less than or equals: a>= b, a <= b. Equals: a==b, please
+                            note the double equality sign==means the equality test, while a single one a=b means an
+                            assignment. Not equals: In maths the notation is ≠, but in JavaScript it’s written as a !=b.
+                            In this article we’ll learn more about different types of comparisons, how JavaScript makes
+                            them, including important peculiarities. At the end you’ll find a good recipe to avoid
+                            “JavaScript quirks”-related issues. Boolean is the result All comparison operators return a
+                            boolean value: true – means “yes”, “correct” or “the truth”. false – means “no”, “wrong” or
+                            “not the truth”. For example: alert( 2> 1 ); // true (correct)
+                            alert( 2 == 1 ); // false (wrong)
+                            alert( 2 != 1 ); // true (correct)
+                            A comparison result can be assigned to a variable, just like any value:
+
+                            let result = 5 > 4; // assign the result of the comparison
+                            alert( result ); // true </p>
+                <p><u>Comparison of Different Types</u></p>
+                <p>Comparison of different types
+                    When comparing values of different types, JavaScript converts the values to numbers.
+
+                    For example:
+
+                    alert( '2' > 1 ); // true, string '2' becomes a number 2
+                    alert( '01' == 1 ); // true, string '01' becomes a number 1
+                    For boolean values, true becomes 1 and false becomes 0.
+
+                    For example:
+
+                    alert( true == 1 ); // true
+                    alert( false == 0 ); // true
+                    A funny consequence
+                    It is possible that at the same time:
+
+                    Two values are equal.
+                    One of them is true as a boolean and the other one is false as a boolean.
+                    For example:
+
+                    let a = 0;
+                    alert( Boolean(a) ); // false
+
+                    let b = "0";
+                    alert( Boolean(b) ); // true
+
+                    alert(a == b); // true!
+                    From JavaScript’s standpoint, this result is quite normal. An equality check converts values using
+                    the numeric conversion (hence "0" becomes 0), while the explicit Boolean conversion uses another set
+                    of rules.</p>
+                <p><u>Comparison with null and undefined</u></p>
+                <p>There’s a non-intuitive behavior when null or undefined are compared to other values.
+
+                    For a strict equality check ===
+                    These values are different, because each of them is a different type.
+
+                    alert( null === undefined ); // false
+                    For a non-strict check ==
+                    There’s a special rule. These two are a “sweet couple”: they equal each other (in the sense of
+                    ==), but not any other value.
+
+                    alert( null == undefined ); // true
+                    For maths and other comparisons <>
+                        <=>=
+                            null/undefined are converted to numbers: null becomes 0, while undefined becomes NaN.
+
+                            <p><u>Caution</u></p>
+                            <p></p>
+            </div>
+
+
+            <!-- Logical Operators -->
+            <div class="page-content" id="item14-content">
+                <p><u>Logical operators</u></p>
+                <p>There are four logical operators in JavaScript: || (OR), && (AND), ! (NOT), ?? (Nullish
+                    Coalescing). Here we cover the first three.
+                </p>
+                <p> Although they are called “logical”, they can be applied to values of any type, not only boolean.
+                    Their result can also be of any type.
+                </p>
+                <p>Let's see the details. </p>
+                <p>|| (OR)
+                    The “OR” operator is represented with two vertical line symbols:
+
+                    result = a || b;
+                    In classical programming, the logical OR is meant to manipulate boolean values only. If any of
+                    its arguments
+                    are true, it returns true, otherwise it returns false.
+
+                    In JavaScript, the operator is a little bit trickier and more powerful. But first, let’s see
+                    what happens
+                    with boolean values.
+
+                    There are four possible logical combinations:
+
+                    alert( true || true ); // true
+                    alert( false || true ); // true
+                    alert( true || false ); // true
+                    alert( false || false ); // false
+                    As we can see, the result is always true except for the case when both operands are false.
+
+                    If an operand is not a boolean, it’s converted to a boolean for the evaluation.
+
+                    For instance, the number 1 is treated as true, the number 0 as false:
+
+                    if (1 || 0) { // works just like if( true || false )
+                    alert( 'truthy!' );
+                    }
+                    Most of the time, OR || is used in an if statement to test if any of the given conditions is
+                    true.
+
+                    For example:
+
+                    let hour = 9;
+
+                    if (hour < 10 || hour> 18) {
+                        alert( 'The office is closed.' );
+                        }
+                        We can pass more conditions:
+
+                        let hour = 12;
+                        let isWeekend = true;
+
+                        if (hour < 10 || hour> 18 || isWeekend) {
+                            alert( 'The office is closed.' ); // it is the weekend
+                            }
+                            OR "||" finds the first truthy value
+                            The logic described above is somewhat classical. Now, let’s bring in the “extra”
+                            features of
+                            JavaScript.
+
+                            The extended algorithm works as follows.
+
+                            Given multiple OR’ed values:
+
+                            result = value1 || value2 || value3;
+                            The OR || operator does the following:
+
+                            Evaluates operands from left to right.
+                            For each operand, converts it to boolean. If the result is true, stops and returns the
+                            original
+                            value of that operand.
+                            If all operands have been evaluated (i.e. all were false), returns the last operand.
+                            A value is returned in its original form, without the conversion.
+
+                            In other words, a chain of OR || returns the first truthy value or the last one if no
+                            truthy value
+                            is found.
+
+                            For instance:
+
+                            alert( 1 || 0 ); // 1 (1 is truthy)
+
+                            alert( null || 1 ); // 1 (1 is the first truthy value)
+                            alert( null || 0 || 1 ); // 1 (the first truthy value)
+
+                            alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+                            This leads to some interesting usage compared to a “pure, classical, boolean-only OR”.
+
+                            Getting the first truthy value from a list of variables or expressions.
+
+                            For instance, we have firstName, lastName and nickName variables, all optional (i.e. can
+                            be
+                            undefined or have falsy values).
+
+                            Let’s use OR || to choose the one that has the data and show it (or "Anonymous" if
+                            nothing set):
+
+                            let firstName = "";
+                            let lastName = "";
+                            let nickName = "SuperCoder";
+
+                            alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+                            If all variables were falsy, "Anonymous" would show up.
+
+                            Short-circuit evaluation.
+
+                            Another feature of OR || operator is the so-called “short-circuit” evaluation.
+
+                            It means that || processes its arguments until the first truthy value is reached, and
+                            then the value
+                            is returned immediately, without even touching the other argument.
+
+                            The importance of this feature becomes obvious if an operand isn’t just a value, but an
+                            expression
+                            with a side effect, such as a variable assignment or a function call.
+
+                            In the example below, only the second message is printed:
+
+                            true || alert("not printed");
+                            false || alert("printed");
+                            In the first line, the OR || operator stops the evaluation immediately upon seeing true,
+                            so the
+                            alert isn’t run.
+
+                            Sometimes, people use this feature to execute commands only if the condition on the left
+                            part is
+                            falsy.
+
+                            && (AND)
+                            The AND operator is represented with two ampersands &&:
+
+                            result = a && b;
+                            In classical programming, AND returns true if both operands are truthy and false
+                            otherwise:
+
+                            alert( true && true ); // true
+                            alert( false && true ); // false
+                            alert( true && false ); // false
+                            alert( false && false ); // false
+                            An example with if:
+
+                            let hour = 12;
+                            let minute = 30;
+
+                            if (hour == 12 && minute == 30) {
+                            alert( 'The time is 12:30' );
+                            }
+                            Just as with OR, any value is allowed as an operand of AND:
+
+                            if (1 && 0) { // evaluated as true && false
+                            alert( "won't work, because the result is falsy" );
+                            }
+                            AND “&&” finds the first falsy value
+                            Given multiple AND’ed values:
+
+                            result = value1 && value2 && value3;
+                            The AND && operator does the following:
+
+                            Evaluates operands from left to right.
+                            For each operand, converts it to a boolean. If the result is false, stops and returns
+                            the original
+                            value of that operand.
+                            If all operands have been evaluated (i.e. all were truthy), returns the last operand.
+                            In other words, AND returns the first falsy value or the last value if none were found.
+
+                            The rules above are similar to OR. The difference is that AND returns the first falsy
+                            value while OR
+                            returns the first truthy one.
+
+                            Examples:
+
+                            // if the first operand is truthy,
+                            // AND returns the second operand:
+                            alert( 1 && 0 ); // 0
+                            alert( 1 && 5 ); // 5
+
+                            // if the first operand is falsy,
+                            // AND returns it. The second operand is ignored
+                            alert( null && 5 ); // null
+                            alert( 0 && "no matter what" ); // 0
+                            We can also pass several values in a row. See how the first falsy one is returned:
+
+                            alert( 1 && 2 && null && 3 ); // null
+                            When all values are truthy, the last value is returned:
+
+                            alert( 1 && 2 && 3 ); // 3, the last one
+                            Precedence of AND && is higher than OR ||
+                            The precedence of AND && operator is higher than OR ||.
+
+                            So the code a && b || c && d is essentially the same as if the && expressions were in
+                            parentheses:
+                            (a && b) || (c && d).
+
+                            Don’t replace if with || or &&
+                            Sometimes, people use the AND && operator as a "shorter way to write if".
+
+                            For instance:
+
+                            let x = 1;
+
+                            (x > 0) && alert( 'Greater than zero!' );
+                            The action in the right part of && would execute only if the evaluation reaches it. That
+                            is, only if
+                            (x > 0) is true.
+
+                            So we basically have an analogue for:
+
+                            let x = 1;
+
+                            if (x > 0) alert( 'Greater than zero!' );
+                            Although, the variant with && appears shorter, if is more obvious and tends to be a
+                            little bit more
+                            readable. So we recommend using every construct for its purpose: use if if we want if
+                            and use && if
+                            we want AND.
+
+                            ! (NOT)
+                            The boolean NOT operator is represented with an exclamation sign !.
+
+                            The syntax is pretty simple:
+
+                            result = !value;
+                            The operator accepts a single argument and does the following:
+
+                            Converts the operand to boolean type: true/false.
+                            Returns the inverse value.
+                            For instance:
+
+                            alert( !true ); // false
+                            alert( !0 ); // true
+                            A double NOT !! is sometimes used for converting a value to boolean type:
+
+                            alert( !!"non-empty string" ); // true
+                            alert( !!null ); // false
+                            That is, the first NOT converts the value to boolean and returns the inverse, and the
+                            second NOT
+                            inverses it again. In the end, we have a plain value-to-boolean conversion.
+
+                            There’s a little more verbose way to do the same thing – a built-in Boolean function:
+
+                            alert( Boolean("non-empty string") ); // true
+                            alert( Boolean(null) ); // false
+                            The precedence of NOT ! is the highest of all logical operators, so it always executes
+                            first, before
+                            && or ||.
+                </p>
+            </div>
+
+
+            <!-- Some styling consideration for javascript -->
+            <div class="page-content" id="item15-content">
+                <p><u>Whitespace</u></p>
+                <p>Whitespace refers to characters that provide the space between other characters. JavaScript has the
+                    following whitespace:
+                <ul>
+                    <li>
+                        Carriage return
+                    </li>
+                    <li>
+                        Space
+                    </li>
+                    <li>
+                        New Line
+                    </li>
+                    <li>
+                        Tab
+                    </li>
+                </ul>
+                </p>
+                <p>JavaScript engine ignores whitespace. However, you can use whitespace to format the code to make it
+                    easy to read and maintain.
+                </p>
+                <p>The following JavaScript code doesn't use whitespace:</p>
+                <pre
+                    class="codes"><code class="language-javascript">  let formatted = true; if (formatted) {console.log('The code is not easy to read');}</code></pre>
+                <p>It is equivalent to the following code that uses whitespace. Hence, this code is much easier to read:
+                </p>
+                <pre class="codes"><code class="language-javascript">  let formatted = true;
+  if (formatted) {
+        console.log('The code is easy to read');
+  }</code></pre>
+                <p>Note that JavaScript bundlers remove all whitespace from JavaScript files and put them into a single
+                    file for deployment. By doing this, JavaScript bundlers make the JavaScript code lighter and faster
+                    to load in the web browsers.
+                </p>
+
+                <p><u>Statements</u></p>
+                <p>A statement is a code that declares a variable or instructs the JavaScript engine to do a task. A
+                    simple statement is terminated by a semicolon (;). Although the semicolon (;) is optional; you
+                    should always use it to terminate a statement.
+                </p>
+
+                <p><u>Comments</u></p>
+                <p>Comments allow you to add notes or hints to JavaScript code. When executing the code, the JavaScript
+                    engine ignores the comments.
+                </p>
+                <p>A single-line comment starts with two forward-slashes characters
+                    (//). A single-line comment makes all the text following the // on the same line into a
+                    comment.<br>For
+                    example: // this is a single-line comment.
+                </p>
+                <p>A block comment begins with a forward slash and
+                    asterisk /* and ends with the opposite */ as in the following example: <br>
+                    /* This is a block comment
+                    that can span multiple lines */
+                </p>
+                <p><u>Cases</u></p>
+                <ul>
+                    <li>
+                        Camel case:
+                        In camel case, you start a name with a lowercaseletter. If the name has multiple words, the
+                        later words will start with an uppercase letter. <br><br>
+                        Ex: <span class='variableCode'>firstName</span>, <span class='variableCode'>lastName</span>
+                    </li>
+                    <br>
+                    <li>
+                        Pascal case:
+                        This case is similar to camel case.
+                        The only difference between the two is that pascal case requires the first letter of the first
+                        word to also be capitalized.
+                        So, when using pascal case, every word starts with an uppercase letter (in contrast to camel
+                        case, where the first word is in lowercase). <br><br>
+
+                        Ex: <span class='variableCode'>NumberOfDonuts = 34</span>, <span class='variableCode'>FavePhrase
+                            = "Hellow World"</span>
+                    </li>
+                    <br>
+                    <li>
+                        Snake Case:
+                        For snake case, all letters remain lowercase. If the name has multiple words, the later words
+                        will start with small letters and you use a underscore (_) to separate the words. <br><br>
+
+                        Ex: <span class='variableCode'>first_name</span>, <span class='variableCode'>last_name</span>
+                    </li>
+                    <br>
+                    <li>
+                        Screaming Snake Case:
+                        This one is just like the regular snake case except the names are all capitalized. <br><br>
+
+                        Ex: <span class='variableCode'>FIRST_NAME</span>, <span class='variableCode'>LAST_NAME</span>
+                    </li>
+                    <br>
+                    <li>
+                        Kebab Case:
+                        The kebab case is very similar to snake case.
+                        The difference between snake case and kebab case is that kebab case separates each word with a
+                        dash character, -, instead of an underscore. The words are all lowercase. <br><br>
+
+                        Ex: <span class='variableCode'>hello-my-name-is</span>, <span
+                            class='variableCode'>number-of-donuts = 12</span>
+                    </li>
+                </ul>
+                <p><u>JavaScript Conventions</u></p>
+                <p>While there are no limits as to what conventions you can use as long as the types remain consistent
+                    on the parts that convention is utilized, here are the general conventions to consider for
+                    JavaScript in particular.
+                </p>
+                <ul>
+                    <li>
+                        Variables and Methods: Camel case
+                    </li>
+                    <br>
+                    <li>
+                        Types and Classes: Pascal Case
+                    </li>
+                    <br>
+                    <li>
+                        Constants: Screaming Snake Case
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Overview of Document Object Model and how it's created -->
+            <div class="page-content" id="item16-content">
+                <p><u>The DOM (Document Object Model)</u></p>
+                <p>DOM is like a map or a blueprint that web browsers use to understand and manipulate web pages.
+                    Think of it as a way for your web browser to organize and access all the different parts of a web
+                    page, like text, images, buttons, and links.
+                </p>
+
+                <p> Imagine a web page as a book, and the DOM is
+                    like the index or table of contents of that book. It
+                    tells you where each chapter or section is, what page it's on, and how you can interact with it.
+                    Although this is the general idea of DOM, here is a step by step breakdown of how DOM is
+                    created:
+                </p>
+
+                <ul style="list-style-type:decimal">
+                    <li>Requesting a Web Page: When you enter a URL in your web browser's address bar or click on a
+                        link,
+                        your browser sends a request to a web server to fetch the corresponding HTML document.</li>
+                    <br>
+                    <li>
+                        Receiving the HTML: The web server responds to the request by sending back the HTML document
+                        associated with the requested URL. This HTML document contains the structured content of the
+                        web
+                        page.
+                    </li>
+                    <li>
+                        <div class="container">
+                            <p><span class="moreDetail">Parsing</span> HTML: Once the HTML
+                                document is received, the web browser's rendering engine starts to
+                                parse
+                                it.
+                            </p>
+                            <div class="hover-box">
+                                Parsing in JavaScript refers to the
+                                process of analyzing a piece of text (usually in the form of a string) to understand
+                                its
+                                structure and extract meaningful information from it
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Building the DOM: As the browser parses the HTML, it constructs the DOM tree. The DOM tree
+                        is a hierarchical representation of the HTML document, where each HTML element (e.g., headings,
+                        paragraphs, images) becomes a node in the tree, and the tree's structure reflects the
+                        structure of the web page.
+                    </li>
+                    <br>
+                    <li>
+                        CSS and JavaScript: In process, the browser also processes any associated CSS
+                        stylesheets and JS code. CSS styles are used to determine how the content is displayed
+                        (e.g., colors, fonts, layout), and JavaScript can dynamically manipulate the DOM.
+                    </li>
+                    <br>
+                    <li>
+                        Rendering the Web Page: Once the DOM is created and CSS styles are applied, the browser uses
+                        this
+                        information to render the web page on your screen. It calculates the layout, positions
+                        elements,
+                        and
+                        displays everything according to the specified styles.
+                    </li>
+                    <br>
+                    <li>
+                        Interactivity: At this point, the web page is fully loaded and interactive. You can click on
+                        links,
+                        submit forms, and interact with the page's elements. JavaScript can also respond to user
+                        actions
+                        and
+                        further modify the DOM, making dynamic changes to the page without requiring a full page
+                        reload.
+                    </li>
+                </ul>
+                <br>
+                <div class="images">
+                    <img id="domImage" src="DOMtree.png" alt="DOM Tree">
+                    <p>DOM Tree Diagram</p>
+                </div>
+                <br>
+                <p> Glad you made it all the way through!+_+)</p>
+                <p>It's all good if everything can't be remembered, just remember that DOM is created as part of the
+                    web page loading process to allow activities such as content manipulation, interactivity, and
+                    content organization to take place.+_!*_
+                </p>
+            </div>
+
+
+            <!-- Overview of DOM Methods and how theyre used to modify DOM elements -->
+            <div class="page-content" id="item17-content">
+                <p><u>DOM Methods</u></P>
+                <p>DOM Methods, as the name might suggest, are ways in which JavaScript can interact with the
+                    Doument Object Model. In other words, think of DOM methods as like a set of tools that
+                    JavaScript uses to interact with and manipulate the elements on a web page. In detail, they
+                    are functions that are built into JavaScript, specifically designed for working with the
+                    Document Object Model. For example, with appropriate DOM methods, one can access/create HTML
+                    elements, manipulate content, and many more.
+                </p>
+                <p>Here are some examples of common DOM methods that have been useful for my understanding:</p>
+                <ul style="list-style-type:disc">
+                    <li>Selecting DOM Elements:
+                        <br>
+                        <br>
+                        <div class="codeBox">
+                            <pre
+                                class="codes"><code class="language-javascript">  const myElement = document.getElementById('myElementId'); </code></pre>
+                        </div>
+                        <button type="button" class="collapsible">&nbsp; Details</button>
+                        <div class="content">
+                            <p>This code selects an HTML element with the ID <span class="blackCode">myElementId</span>
+                                and stores <br>
+                                it in
+                                the variable "myElement"</p>
+                        </div>
+                    </li>
+                    <br>
+                    <li> Modifying DOM Elements:
+                        <br>
+                        <br>
+                        <p class="codeDescription">// Change the text content of an element.</p>
+                        <pre
+                            class="codes"><code class="language-javascript">  element.textContent or element.innerText</code></pre>
+                        <p class="codeDescription">// Change the HTML content of an element.</p>
+                        <pre class="codes"><code class="language-javascript">  element.innerHTML</code></pre>
+                        <p class="codeDescription">// Modify element attributes </p>
+                        <pre
+                            class="codes"><code class="language-javascript">  element.setAttribute(attr, value)</code></pre>
+                    </li><br>
+                    <li> Creating and Appending Elements:
+                        <br>
+                        <br>
+                        <p class="codeDescription">// Create a new paragraph element</p>
+                        <pre class="codes"><code>  const newParagraph = document.createElement('p'); 
+  newParagraph.textContent = 'This is a new paragraph.'; </pre></code>
+                        <p class="codeDescription"> // Append the new paragraph to an existing element </p>
+                        <pre class="codes"><code>  elementById.appendChild(newParagraph);</code></pre>
+                    </li><br>
+                    <li> Event Handling:
+                        <br>
+                        <br>
+                        <p class="codeDescription"> // Add a click event listener to an element</p>
+                        <pre class="codes"><code>  myElement.addEventListener('click', function() {
+    alert('Element clicked!');
+  });                  </pre></code>
+                        <p class="codeDescription"> // This code attaches a click event listener to "myElement".
+                            When
+                            the element is clicked,<br>
+                            it triggers the provided function, which displays an alert with the message "Element
+                            clicked!"</p>
+                    </li> <br>
+                    <li> Modifying Element Classes:
+                        <br>
+                        <br>
+                        <p class="codeDescription"> // Add a CSS class to an element</p>
+                        <pre class="codes"><code>  myElement.classList.add('highlight');</pre></code>
+                        <p class="codeDescription">// This code adds the CSS class "highlight" to "myElement,"
+                            which can be used to apply specific styling or behavior to the selected element.
+                        </p>
+                    </li>
+                </ul>
+
+                <p>While there are handful of other DOM methods available and even more layers to the ones
+                    discussed above, these DOM methods can serve as the ground work for first grasping the idea of what
+                    DOM
+                    methods are and how they work.
+                </p>
+            </div>
+
+            <!-- Version Section -->
+            <div class="page-content" id="item19-content">
+                <p><u>Feedback</u></p>
+                <p>Any feedback regarding this website would be appreciated! Anything technical, informational, and/or
+                    even grammatical feedback
+                    would be helpful as I plan to continuously update/polish the website when I feel the need to.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
